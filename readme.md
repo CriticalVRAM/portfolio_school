@@ -2,4 +2,4 @@
 
 ## Static protfolio website for a school project
 
-[tba](https://nani-sore-0.github.io/GoldenGrain/index.html)
+[Website link](https://nani-sore-0.github.io/portfolio_school/)

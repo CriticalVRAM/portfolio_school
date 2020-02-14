@@ -13,9 +13,6 @@ body {
   min-height: 100vh;
   max-width: 100vw;
 
-  display: grid;
-  justify-items: center;
-
   font-size: 1.6rem;
 }
 ul {
@@ -25,6 +22,6 @@ a {
   text-decoration: none;
 }
 ::placeholder {
-  font-family: $font-main;
+  font-family: $font;
   font-size: 1.6rem;
 }

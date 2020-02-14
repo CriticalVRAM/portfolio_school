@@ -1,0 +1,11 @@
+.title {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: grid;
+  align-items: center;
+  justify-items: start;
+
+  padding-left: 50px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7)), url(../img/cover.jpg);
+}

@@ -1,26 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 body {
-  font-family: $font-main;
+  font-family: $font;
 }
 
 h1 {
-  color: $base-color;
-  font-size: 10rem;
-  font-family: $font-dec;
+  font-size: 8rem;
+  color: $color;
 }
 
 h2 {
-  font-family: $font-dec;
   font-size: 4rem;
 }
 
 h3 {
   font-size: 3rem;
   font-weight: normal;
-  border-bottom: 3px solid $base-color;
-  margin-bottom: 2rem;
-  justify-self: center;
 }
 
 p {

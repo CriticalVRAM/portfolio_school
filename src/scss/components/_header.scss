@@ -9,11 +9,9 @@
   justify-content: space-between;
 
   background-color: #212121;
-  padding: 10px 100px;
-  border-radius: 0 0 5px 5px;
-  box-shadow: 0px 7px 6px black;
+  padding: 0 100px;
   &__logo {
-    height: 85px;
+    height: 65px;
     width: auto;
   }
   &__ul {
@@ -21,7 +19,7 @@
     grid-auto-flow: column;
     gap: 3rem;
     & li a {
-      font-size: 3rem;
+      font-size: 2.4rem;
       color: white;
       &:hover {
         color: $color;

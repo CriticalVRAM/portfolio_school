@@ -1,11 +1,13 @@
 .title {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 
   display: grid;
   align-items: center;
   justify-items: start;
+  align-content: center;
 
   padding-left: 50px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7)), url(../img/cover.jpg);
+  background-size: cover;
 }

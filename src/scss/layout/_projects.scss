@@ -1,0 +1,15 @@
+.project {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-items: center;
+  gap: 50px;
+  padding: 50px 100px;
+  &__box {
+    width: 800px;
+    height: 400px;
+    background-color: lightgreen;
+    border: 1px solid red;
+  }
+}

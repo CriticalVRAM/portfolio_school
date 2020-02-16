@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  margin-top: 8rem;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+
+  background-color: #000;
+  color: white;
+  padding: 5rem 0;
+  // children
+  & h3 {
+    margin-bottom: 2rem;
+  }
+  & a:hover {
+    color: $color;
+  }
+  // form
+  & form {
+    display: grid;
+    width: 30%;
+  }
+  & input,
+  textarea,
+  button {
+    border: 1px solid #fff;
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+  }
+  & textarea {
+    border-top: none;
+    border-bottom: none;
+    height: 100px;
+    resize: none;
+  }
+}

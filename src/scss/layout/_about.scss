@@ -1,9 +1,11 @@
 .about {
   width: 100%;
-  padding: 2rem;
+  padding: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
+  background-color: #000;
+  color: white;
   & img {
     width: 40rem;
     grid-row: 1 / 3;

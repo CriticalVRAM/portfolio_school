@@ -20,7 +20,7 @@
   // form
   & form {
     display: grid;
-    width: 30%;
+    width: 50%;
   }
   & input,
   textarea,
@@ -33,7 +33,15 @@
   & textarea {
     border-top: none;
     border-bottom: none;
-    height: 100px;
+    height: 125px;
     resize: none;
+  }
+  & button {
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background-color: #fff;
+      color: black;
+    }
   }
 }

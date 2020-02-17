@@ -1,0 +1,24 @@
+.skills {
+  margin: 5rem 0;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  & h2 {
+    margin-bottom: 5rem;
+  }
+  & h3 {
+    margin-bottom: 3rem;
+  }
+  &__div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    &--f {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    & img {
+      height: 150px;
+    }
+  }
+}

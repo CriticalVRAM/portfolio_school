@@ -3,7 +3,7 @@
 0 - 600px   :      Phone              / phone
 600 - 900px :      Tablet - portrait  / tab-port
 900 - 1200px:      Tablet - landscape / tab-land
-1800px+     :      Tablet - portrait  / big-decktop
+1800px+     :      Tablet - portrait  / big-desktop
 */
 
 @mixin respond($breakpoint) {

@@ -7,8 +7,12 @@
   justify-items: start;
   align-content: center;
 
-  padding-left: 50px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7)), url(../img/cover.jpg);
   background-size: cover;
   background-attachment: fixed;
+  padding: 0 10px;
+  @media screen and (max-width: 500px) {
+    min-height: 60vh;
+    padding-top: 5rem;
+  }
 }

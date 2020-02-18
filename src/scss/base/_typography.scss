@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
 body {
   font-family: $font;
+  font-size: 1.6rem;
 }
-
 h1 {
   font-size: 8rem;
   color: $color;
@@ -14,29 +13,29 @@ h1 {
     font-size: 4rem;
   }
 }
-
 h2 {
   font-size: 4rem;
   border-bottom: 3px solid $color;
   color: $color;
-  @include respond(tab-port) {
+  @media screen and (max-width: 900px) {
     font-size: 3.5rem;
   }
 }
-
 h3 {
   font-size: 3rem;
   font-weight: normal;
-  @include respond(tab-port) {
+
+  @media screen and (max-width: 900px) {
     font-size: 2.5rem;
   }
 }
-
 p {
   font-size: 1.8rem;
-  line-height: 2.4rem;
-  letter-spacing: 0.025rem;
-  @include respond(tab-port) {
+  @media screen and (max-width: 900px) {
     font-size: 1.6rem;
   }
+}
+::placeholder {
+  font-family: $font;
+  font-size: 1.6rem;
 }

@@ -6,10 +6,10 @@ body {
 h1 {
   font-size: 8rem;
   color: $color;
-  @media screen and (max-width: 900px) {
+  @include respond(tab-port) {
     font-size: 6rem;
   }
-  @media screen and (max-width: 600px) {
+  @include respond(phone) {
     font-size: 4rem;
   }
 }
@@ -17,7 +17,7 @@ h2 {
   font-size: 4rem;
   border-bottom: 3px solid $color;
   color: $color;
-  @media screen and (max-width: 900px) {
+  @include respond(tab-port) {
     font-size: 3.5rem;
   }
 }
@@ -25,13 +25,13 @@ h3 {
   font-size: 3rem;
   font-weight: normal;
 
-  @media screen and (max-width: 900px) {
+  @include respond(tab-port) {
     font-size: 2.5rem;
   }
 }
 p {
   font-size: 1.8rem;
-  @media screen and (max-width: 900px) {
+  @include respond(tab-port) {
     font-size: 1.6rem;
   }
 }

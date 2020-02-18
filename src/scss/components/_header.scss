@@ -6,16 +6,15 @@
 
   display: grid;
   align-items: center;
-  grid-auto-flow: column;
+  grid-template-columns: auto auto;
   justify-content: space-between;
 
   background-color: #212121;
   padding: 0 100px;
-  @media screen and (max-width: 900px) {
-    padding: 10px 25px;
+  @include respond(tab-port) {
+    padding: 1rem 2.5rem;
   }
   @media screen and (max-width: 500px) {
-    grid-auto-flow: column;
     justify-items: center;
     justify-content: center;
     gap: 2rem;
@@ -23,7 +22,7 @@
   &__logo {
     height: 65px;
     width: auto;
-    @media screen and (max-width: 900px) {
+    @include respond(tab-port) {
       height: 50px;
       width: auto;
     }
@@ -40,7 +39,7 @@
     }
     & li a {
       font-size: 2.4rem;
-      @media screen and (max-width: 900px) {
+      @include respond(tab-port) {
         font-size: 2rem;
       }
       @media screen and (max-width: 400px) {

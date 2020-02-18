@@ -29,7 +29,6 @@
     text-align: justify;
     gap: 3rem;
 
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/lk.jpg);
     background-size: cover;
     background-position: center;
     color: white;
@@ -46,15 +45,15 @@
   }
   // background images
   &__box--1 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/lk.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/lk.jpg);
   }
   &__box--2 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/gg.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/gg.jpg);
   }
   &__box--3 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/natsuki.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/natsuki.jpg);
   }
   &__box--4 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/micko.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/micko.jpg);
   }
 }

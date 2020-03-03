@@ -1,0 +1,429 @@
+$color: #8e44ad;
+$font: "Open Sans";
+/* MEDIA QUERY MANAGER
+/ SIZE /          / NAME /            / $breakpoint name
+0 - 600px   :      Phone              / phone
+600 - 900px :      Tablet - portrait  / tab-port
+900 - 1200px:      Tablet - landscape / tab-land
+1800px+     :      Tablet - portrait  / big-desktop
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == ie11 {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    } // query for ie11 only
+  }
+  @if $breakpoint == chrome {
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      @content;
+    } // query for chrome only
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+body {
+  font-family: $font;
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 8rem;
+  color: $color;
+  @include respond(tab-port) {
+    font-size: 6rem;
+  }
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+}
+h2 {
+  font-size: 4rem;
+  border-bottom: 3px solid $color;
+  color: $color;
+  @include respond(tab-port) {
+    font-size: 3.5rem;
+  }
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+}
+p {
+  font-size: 1.8rem;
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
+}
+::placeholder {
+  font-family: $font;
+  font-size: 1.6rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+}
+body {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  margin: 3rem 0;
+}
+.nav {
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+
+  background-color: #212121;
+  padding: 0 100px;
+  @include respond(tab-port) {
+    padding: 1rem 2.5rem;
+  }
+  @media screen and (max-width: 500px) {
+    justify-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__logo {
+    height: 65px;
+    width: auto;
+    @include respond(tab-port) {
+      height: 50px;
+      width: auto;
+    }
+    @media screen and (max-width: 500px) {
+      height: 35px;
+    }
+  }
+  &__ul {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3rem;
+    @media screen and (max-width: 500px) {
+      gap: 10px;
+    }
+    & li a {
+      font-size: 2.4rem;
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 1.8rem;
+      }
+      color: white;
+      &:hover {
+        color: $color;
+        border-bottom: 2px solid $color;
+      }
+    }
+  }
+}
+.footer {
+  width: 100%;
+  margin-top: 8rem;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+
+  background-color: #000;
+  color: white;
+  padding: 5rem 0;
+  @include respond(tab-land) {
+    padding: 3rem 2rem;
+  }
+  @include respond(phone) {
+    grid-auto-flow: row;
+  }
+  // children
+  &__links {
+    text-align: center;
+  }
+  & h3 {
+    margin-bottom: 2rem;
+  }
+  & a:hover {
+    color: $color;
+  }
+  // form
+  & form {
+    display: grid;
+    width: 450px;
+    @include respond(tab-port) {
+      width: 350px;
+    }
+    @include respond(phone) {
+      width: 100%;
+      grid-row: 1;
+      margin-bottom: 2rem;
+    }
+  }
+  & input,
+  textarea,
+  button {
+    border: 1px solid #fff;
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+  }
+  & textarea {
+    border-top: none;
+    border-bottom: none;
+    height: 125px;
+    resize: none;
+  }
+  & button {
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background-color: #fff;
+      color: black;
+    }
+  }
+}
+.button {
+  width: 12.5rem;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 3px solid $color;
+  color: black;
+  // children
+  & i {
+    color: inherit;
+    font-size: 2.4rem;
+  }
+  & a {
+    color: inherit;
+    font-size: 1.6rem;
+  }
+  // animations
+  transition: 0.2s;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+  // variations
+  &--big {
+    margin-top: 2rem;
+    padding: 0.6rem;
+    width: auto;
+    color: white;
+    & a {
+      font-size: 3.2rem;
+      @media screen and (max-width: 500px) {
+        font-size: 2.8rem;
+      }
+    }
+    & i {
+      font-size: 4.8rem;
+      @media screen and (max-width: 500px) {
+        font-size: 4.4rem;
+      }
+    }
+  }
+  &--white {
+    color: white;
+  }
+}
+.about {
+  width: 100%;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: #000;
+  color: white;
+  @include respond(tab-land) {
+    padding: 5rem 1rem;
+  }
+  @media screen and (max-width: 800px) {
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+  }
+  & img {
+    height: 450px;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    justify-self: center;
+    border-radius: 3px;
+    @include respond(tab-land) {
+      height: 300px;
+    }
+    @include respond(phone) {
+      height: 250px;
+    }
+  }
+  & h2 {
+    margin-bottom: 3rem;
+    @media screen and (max-width: 800px) {
+      margin-top: 3rem;
+      justify-self: center;
+    }
+  }
+}
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 500px 500px;
+  justify-items: center;
+  gap: 50px;
+
+  padding: 2.5% 5%;
+  @include respond(tab-land) {
+    padding: 2% 2.5%;
+    gap: 25px;
+  }
+  @include respond(tab-port) {
+    grid-template-columns: auto;
+    grid-template-rows: auto repeat(4, 400px);
+  }
+  // children
+  & h2 {
+    grid-column: 1 / 3;
+    @include respond(tab-port) {
+      grid-column: 1 / 2;
+    }
+  }
+  &__box {
+    display: grid;
+    align-content: start;
+    align-items: center;
+    justify-items: start;
+    text-align: justify;
+    gap: 3rem;
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 3rem 3rem 3rem;
+    border-radius: 5px;
+    @include respond(phone) {
+      padding: 2rem;
+    }
+  }
+  &__btns {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+  }
+  // background images
+  &__box--1 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/lk.jpg);
+  }
+  &__box--2 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/gg.jpg);
+  }
+  &__box--3 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/natsuki.jpg);
+  }
+  &__box--4 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/micko.jpg);
+  }
+}
+.skills {
+  margin: 5rem 0;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding: 1rem;
+
+  @include respond(tab-port) {
+    gap: 1rem;
+  }
+  & h2 {
+    margin-bottom: 5rem;
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+  }
+  & h3 {
+    margin-bottom: 3rem;
+    @include respond(phone) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media screen and (max-width: 700px) {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto auto;
+      gap: 1rem;
+    }
+    justify-items: center;
+    align-items: center;
+    &--f {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    & img {
+      height: 150px;
+      @include respond(tab-port) {
+        height: 120px;
+      }
+      @include respond(phone) {
+        height: 80px;
+      }
+    }
+  }
+}
+.title {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  align-content: center;
+
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7)), url(../img/cover.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 10px;
+  @media screen and (max-width: 500px) {
+    min-height: 60vh;
+    padding-top: 5rem;
+  }
+}
